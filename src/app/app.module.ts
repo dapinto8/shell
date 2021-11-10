@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MfHostDirective } from './directives/mf-host.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MfHostDirective
   ],
   imports: [
     BrowserModule,
