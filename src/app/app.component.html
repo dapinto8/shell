@@ -1,3 +1,13 @@
+<span #header></span>
+<span #leftBar></span>
 <ng-template #city></ng-template>
-<div #sales></div>
+<span #rightBar></span>
 <router-outlet></router-outlet>
+<span #sales></span>
+<ng-template #store></ng-template>
+<div class="memory-stats">
+  <span class="stat">Limit: {{ this.limitMemory}} MB</span>
+  <span class="stat">Total: {{ this.totalMemory}} MB</span>
+  <span class="stat">Used: {{ this.usedMemory}} MB</span>
+  <span class="stat"> {{ this.usedPercent}}%</span>
+</div>

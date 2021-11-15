@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-black: #232425;
+  --color-gray-1: #dfe4ea;
+  --color-gray-2: #d2dae2;
+  --color-blue: #4c9aff;
+  --color-purple: #575fcf;
+  --color-yellow: #ffdd59;
+  --color-green: #05c46b;
+  --color-green-2: #38ada9;
+}
+
 body {
   margin: 0;
+  overflow: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+@import './assets/styles/sidebar.scss';

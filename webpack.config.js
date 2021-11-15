@@ -1,5 +1,6 @@
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const mf = require('@angular-architects/module-federation/webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const share = mf.share;
 
@@ -25,11 +26,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'shell',
       filename: 'remoteEntry.js',
-      // exposes: {
-      //   './Connect': './src/app/connect.ts'
-      // },
       remotes: {
-        dashboard: 'dashboard@//localhost:5100/remoteEntry.js',
+        // dashboard: 'dashboard@//localhost:5100/remoteEntry.js',
       },
       shared: share({
         '@angular/core': { singleton: true, strictVersion: true, requiredVersion: 'auto' },
@@ -40,5 +38,6 @@ module.exports = {
       }),
     }),
     sharedMappings.getPlugin(),
+    new BundleAnalyzerPlugin()
   ],
 };

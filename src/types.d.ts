@@ -1,1 +1,1 @@
-declare module 'sales/Sales';
+declare module 'dashboard/Dashboard';

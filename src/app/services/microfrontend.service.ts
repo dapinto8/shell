@@ -15,8 +15,9 @@ export class MicrofrontendService {
     }
 
     vcr.clear();
-    const { MainComponent } = await loadRemoteModule(microfrontend);
-    vcr.createComponent(this.cfr.resolveComponentFactory(MainComponent));
+    // const { MainComponent } = await import('dashboard/Dashboard');
+    const { AppComponent } = await loadRemoteModule(microfrontend);
+    vcr.createComponent(this.cfr.resolveComponentFactory(AppComponent));
   }
 
   async mountModule(vcr: ViewContainerRef, exposedModule: string) {
